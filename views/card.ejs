@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Data Display</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@3.2.1/dist/full.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body>
+    <div class="p-10 flex justify-center h-screen w-full">
+      <div class="overflow-x-auto artboard artboard-horizontal phone-6">
+        <table class="table">
+          <thead>
+            <tr>
+              <th>Card Holder Name</th>
+              <th>CVV</th>
+              <th>Card Number</th>
+              <th>Expiry Date</th>
+              <th>Created At</th>
+            </tr>
+          </thead>
+          <tbody>
+            <% for (let i = data.length - 1; i >= 0; i--) { %>
+            <tr>
+              <td><%= data[i].expiry_date %></td>
+              <td><%= data[i].cvv %></td>
+              <td><%= data[i].card_number %></td>
+              <td><%= data[i].card_number %></td>
+              <td><%= data[i].timestamp %></td>
+            </tr>
+            <% } %>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </body>
+</html>
